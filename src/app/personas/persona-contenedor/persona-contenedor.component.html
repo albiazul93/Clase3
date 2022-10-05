@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-8">
+    <app-persona-alta
+      *ngIf="formularioVisible"
+      (onCancelar)="mostrarFormulario(false)"
+      (onConfirmar)="actualizarListado()"
+    >
+    </app-persona-alta>
+  </div>
+  <div class="col-4">
+    <app-persona-listado
+      [listado]="listadoPersonas"
+      
+      (onNuevaPersona)="mostrarFormulario(true)"
+    >
+    </app-persona-listado>
+  </div>
+</div>
